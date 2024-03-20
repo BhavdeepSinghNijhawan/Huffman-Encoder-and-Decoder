@@ -11,7 +11,7 @@ Huffman encoding is a method used for lossless data compression, primarily in th
 
 # Live URL
 
-https://bhavdeepsinghnijhawan.github.io/Message-Encoder-and-Decoder/
+https://bhavdeepsinghnijhawan.github.io/Huffman-Encoder-and-Decoder/
 
 # Contributor
 
