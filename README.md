@@ -169,7 +169,101 @@ body {
 - **margin: auto;:** Centers the elements horizontally within their containing element.
 - **display: block;:** Sets the elements to be displayed as block-level elements, causing them to start on a new line and take up the full width available to them.
 
-### JavaScript
+### JAVASCRIPT
+
+#### heap.js
+```
+export { BinaryHeap }
+
+class BinaryHeap {
+```
+- **export { BinaryHeap }:** This line exports the BinaryHeap class to make it available for import in other JavaScript files.
+- **class BinaryHeap {:** This line defines the BinaryHeap class.
+```
+    constructor() {
+        this.heap = [];
+    }
+```
+- **constructor():** This is a special method in JavaScript classes that is automatically called when an instance of the class is created. It initializes a new instance of the BinaryHeap class.
+- **this.heap = [];:** This line initializes the heap property of the BinaryHeap instance as an empty array, which will be used to store the elements of the binary heap.
+```
+    insert(value) {
+        this.heap.push(value);
+        this.bubbleUp(); // heapify
+    }
+```
+- **insert(value):** This method adds a new value to the binary heap.
+- **this.heap.push(value);:** It adds the new value to the end of the heap array.
+- **this.bubbleUp();:** This line calls the bubbleUp() method to maintain the heap property by moving the newly inserted value up the tree as necessary.
+```
+    size() {
+        return this.heap.length;
+    }
+```
+- **size():** This method returns the number of elements currently stored in the binary heap.
+```
+    empty() {
+        return (this.size() === 0);
+    }
+```
+- **empty():** This method checks if the binary heap is empty and returns true if it is, otherwise false.
+```
+    bubbleUp() {
+        let index = this.size() - 1;
+
+        while (index > 0) {
+            let element = this.heap[index],
+                parentIndex = Math.floor((index - 1) / 2),
+                parent = this.heap[parentIndex];
+
+            if (parent[0] >= element[0]) break;
+            this.heap[index] = parent;
+            this.heap[parentIndex] = element;
+            index = parentIndex;
+        }
+    }
+```
+- **bubbleUp():** This method moves the last element of the binary heap (inserted at the end) up the tree until the heap property is satisfied.
+- It compares the newly added element with its parent, and if the parent is smaller, it swaps them. This process continues until the element reaches its correct position in the heap.
+```
+    extractMax() {
+        const max = this.heap[0];
+        const tmp = this.heap.pop();
+        if (!this.empty()) {
+            this.heap[0] = tmp;
+            this.sinkDown(0);
+        }
+        return max;
+    }
+```
+- **extractMax():** This method removes and returns the maximum value (root) from the binary heap.
+- It replaces the root with the last element of the heap, then calls sinkDown(0) to restore the heap property.
+```
+    sinkDown(index) {
+        let left = 2 * index + 1,
+            right = 2 * index + 2,
+            largest = index;
+        const length = this.size();
+
+        if (left < length && this.heap[left][0] > this.heap[largest][0]) {
+            largest = left;
+        }
+        if (right < length && this.heap[right][0] > this.heap[largest][0]) {
+            largest = right;
+        }
+        if (largest !== index) {
+            let tmp = this.heap[largest];
+            this.heap[largest] = this.heap[index];
+            this.heap[index] = tmp;
+            this.sinkDown(largest);
+        }
+    }
+```
+- **sinkDown(index):** This method moves the element at the given index down the tree until the heap property is satisfied.
+- It compares the element with its children and swaps it with the larger child if necessary. This process continues until the element is in its correct position in the heap.
+
+This class implements a binary heap data structure, providing methods to insert elements, extract the maximum element, and maintain the heap property. It's commonly used in priority queue implementations and other algorithms requiring efficient access to the maximum (or minimum) element.
+
 ### PHP
 
 ## LIVE URL
