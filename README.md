@@ -264,6 +264,10 @@ class BinaryHeap {
 
 This class implements a binary heap data structure, providing methods to insert elements, extract the maximum element, and maintain the heap property. It's commonly used in priority queue implementations and other algorithms requiring efficient access to the maximum (or minimum) element.
 
+#### huffman.js
+
+
+
 ### PHP
 
 ## LIVE URL
