@@ -116,12 +116,65 @@ Huffman encoding is a method used for lossless data compression, primarily in th
 6. Marks the end of the HTML document.
 
 ### CSS
+
+```
+html,
+body {
+    height: 100%;
+}
+```
+- **html, body:** Selects both the <html> and <body> elements.
+- **height: 100%;:** Sets the height of the <html> and <body> elements to 100% of the viewport height. This ensures that the entire viewport height is covered by these elements, which is often used to ensure elements fill the entire height of the browser window.
+```
+.text_box {
+    padding: 30px;
+    width: 50%;
+    height: 100%;
+    border: 1px solid rgb(0, 0, 0);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+```
+- **.text_box:** Selects elements with the class text_box.
+- **padding: 30px;:** Adds 30 pixels of padding to all sides of the .text_box elements.
+- **width: 50%;:** Sets the width of the .text_box elements to 50% of their containing element's width.
+- **height: 100%;:** Sets the height of the .text_box elements to 100% of their containing element's height.
+- **border:** 1px solid rgb(0, 0, 0);: Sets a 1 pixel solid black border around the .text_box elements.
+- **display: flex;:** Specifies that the layout of the .text_box elements should be a flexbox layout.
+- **flex-wrap: wrap;:** Allows the .text_box elements to wrap to the next line if they exceed the width of their container.
+- **align-content: center;:** Centers the content vertically within the flex container.
+```
+#container {
+    width: 100%;
+    height: 70%;
+    background-color: rgb(255, 102, 0);
+    display: flex;
+    margin: 0 auto;
+}
+```
+- **#container:** Selects an element with the ID container.
+- **width: 100%;:** Sets the width of the #container element to 100% of its containing element's width.
+- **height: 70%;:** Sets the height of the #container element to 70% of its containing element's height.
+- **background-color:** rgb(255, 102, 0);: Sets the background color of the #container element to a shade of orange using RGB values.
+- **display: flex;:** Specifies that the layout of the #container element should be a flexbox layout.
+- **margin: 0 auto;:** Sets the top and bottom margins of the #container element to 0 and automatically centers it horizontally within its containing element.
+```
+.center_buttons {
+    margin: auto;
+    display: block;
+}
+```
+- **.center_buttons:** Selects elements with the class center_buttons.
+- **margin: auto;:** Centers the elements horizontally within their containing element.
+- **display: block;:** Sets the elements to be displayed as block-level elements, causing them to start on a new line and take up the full width available to them.
+
 ### JavaScript
 ### PHP
 
 ## LIVE URL
 
-https://bhavdeepsinghnijhawan.github.io/Huffman-Encoder-and-Decoder/
+- https://bhavdeepsinghnijhawan.github.io/Huffman-Encoder-and-Decoder/
 
 ## CONTRIBUTOR
 
