@@ -441,6 +441,21 @@ decode(data) {
 
 ### PHP
 
+```
+<?php
+```
+- **<?php:** This is the opening PHP tag. It indicates the start of a PHP script.
+```
+include_once("index.html");
+```
+- **include_once("index.html");:** This line includes the content of the index.html file into the current PHP script.
+- **include_once:** This is a PHP function used to include a file. It includes the specified file once, and if the same file has already been included, it will not be included again.
+- **"index.html":** This is the path to the file that will be included. In this case, it's index.html.
+```
+?>
+```
+- **?>:** This is the closing PHP tag. It indicates the end of the PHP script.
+
 ## LIVE URL
 
 - https://bhavdeepsinghnijhawan.github.io/Huffman-Encoder-and-Decoder/
