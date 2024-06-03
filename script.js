@@ -1,6 +1,6 @@
+//Auhor: Bhavdeep Singh Nijhawan
+
 import { HuffmanCoder } from './huffman.js';
-
-
 onload = function () {
     // Get reference to elements
     const treearea = document.getElementById('treearea');
@@ -8,13 +8,9 @@ onload = function () {
     const decode = document.getElementById('decode');
     const temptext = document.getElementById('temptext');
     const upload = document.getElementById('uploadedFile');
-
     const coder = new HuffmanCoder();
-
     upload.addEventListener('change',()=>{ alert("File uploaded") });
-
     encode.onclick = function () {
-
         const uploadedFile = upload.files[0];
         if(uploadedFile===undefined){
             alert("No file uploaded !");
@@ -35,9 +31,7 @@ onload = function () {
         };
         fileReader.readAsText(uploadedFile, "UTF-8");
     };
-
     decode.onclick = function () {
-
         const uploadedFile = upload.files[0];
         if(uploadedFile===undefined){
             alert("No file uploaded !");
@@ -60,7 +54,6 @@ onload = function () {
     };
 
 };
-
 function downloadFile(fileName, data){
     let a = document.createElement('a');
     a.href = "data:application/octet-stream,"+encodeURIComponent(data);
