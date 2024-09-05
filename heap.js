@@ -18,8 +18,6 @@ class BinaryHeap {
     empty(){
         return ( this.size()===0 );
     }
-
-    //using iterative approach
     bubbleUp() {
         let index = this.size() - 1;
 
