@@ -10,7 +10,7 @@
 
 #### Huffman Encoder
 
-- The Huffman encoding algorithm builds a variable-length prefix-free code tree based on the frequencies of symbols in the input data.
+- The Huffman Encoding Algorithm builds a variable-length prefix-free code tree based on the frequencies of symbols in the input data.
 - It starts by creating a binary tree where each leaf node represents a symbol from the input data, and the frequency of each symbol determines the weight of the corresponding leaf node.
 - Then, it repeatedly merges the two lowest frequency nodes into a new internal node until all nodes are merged into a single root node, forming a binary tree.
 - The binary tree is traversed to assign binary codes to each symbol. Symbols that appear more frequently are assigned shorter codes, resulting in efficient compression.
@@ -24,10 +24,10 @@
 
 #### Use Cases
 
-- Data Compression: Huffman encoding is commonly used in various compression algorithms like ZIP, gzip, and DEFLATE to reduce the size of files for storage or transmission. It is especially effective for compressing text files and other data with repeating patterns or skewed symbol frequencies.
-- Text and Image Compression: Huffman encoding can be used to compress text documents, images, and other types of data where there are frequent occurrences of certain symbols or pixel values.
-- Data Transmission: It can be used to compress data before transmitting it over networks, reducing bandwidth usage and speeding up data transfer.
-- Embedded Systems: Huffman encoding is lightweight and efficient, making it suitable for use in embedded systems and devices with limited computational resources.
+- **Data Compression:** Huffman encoding is commonly used in various compression algorithms like **ZIP**, **gzip**, and **DEFLATE** to reduce the size of files for storage or transmission. It is especially effective for compressing text files and other data with repeating patterns or skewed symbol frequencies.
+- **Text and Image Compression:** Huffman Encoding can be used to compress text documents, images, and other types of data where there are frequent occurrences of certain symbols or pixel values.
+- **Data Transmission:** It can be used to compress data before transmitting it over networks, reducing bandwidth usage and speeding up data transfer.
+- **Embedded Systems:** Huffman Encoding is lightweight and efficient, making it suitable for use in embedded systems and devices with limited computational resources.
 
 ## TECHNICAL STACKS
 
@@ -35,35 +35,35 @@
 ```
 <!DOCTYPE html>
 ```
-1. Declares the document type and version of HTML being used.
+- Declares the **document type** and **version of HTML** being used.
 ```
 <html lang="en">
 ```
-2. Specifies the language of the document, in this case, English.
+- Specifies the **language of the document**, in this case, English.
 ```
 <head>
 ```
-3. Contains meta-information about the HTML document, such as the character set, viewport settings, title, and links to external resources (stylesheets and scripts).
+- Contains **meta-information** about the HTML document, such as the **character set**, **viewport settings**, **title**, and links to external resources (stylesheets and scripts).
 ```
 <meta charset="UTF-8">
 ```
-- Specifies the character encoding of the document as UTF-8.
+- Specifies the **character encoding of the document** as UTF-8.
 ```
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
-- Sets the viewport width to the width of the device and sets the initial zoom level to 1.0.
+- Sets the **viewport width to the width** of the device and **sets the initial zoom level** to 1.0.
 ```
 <title>Huffman Encoder and Decoder</title>
 ```
-- Sets the title of the document to "Huffman Encoder and Decoder".
+- **Sets the title of the document** to "Huffman Encoder and Decoder".
 ```
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 ```
-- Links to the Bootstrap CSS framework hosted on a CDN (Content Delivery Network), enabling the use of Bootstrap styles in the document.
+- Links to the **Bootstrap CSS framework hosted on a CDN (Content Delivery Network)**, enabling the use of Bootstrap styles in the document.
 ```
 <link rel="stylesheet" href="style.css">
 ```
-- Links to an external CSS file named "style.css" for additional styling.
+- Links to an **external CSS file named "style.css"** for additional styling.
 ```
 <script src="heap.js"></script>
 ```
@@ -71,7 +71,7 @@
 ```
 <script src="huffman.js" type="module"></script>
 ```
-- Includes a JavaScript module file named "huffman.js". The type="module" attribute indicates that the script is an ES6 module.
+- Includes a JavaScript module file named "huffman.js". The **type="module" attribute indicates that the script is an ES6 module**.
 ```
 <script src="script.js" type="module"></script>
 ```
@@ -79,17 +79,17 @@
 ```
 <body>
 ```
-4. Contains the content of the HTML document that will be displayed in the browser.
+- Contains the content of the HTML document that will be displayed in the browser.
 ```
 <nav>
 ```
-- Defines a navigation bar with the class "navbar navbar-light" and styles it with custom CSS properties.
+- Defines a navigation bar with the class "**`navbar navbar-light`**" and styles it with custom CSS properties.
 ```
 <div id="container">
 ```
 - Contains two text boxes, one for displaying the tree structure and the other for displaying operation information.
-- Left part: A text box with scrollable content, identified by the class "text_box". It contains a span element with the id "treearea" to display the tree structure.
-- Right part: Similar to the left part, but it displays operation information and has the id "temptext".
+- **Left part:** A text box with **scrollable content**, identified by the class "**`text_box`**". It contains a span element with the id "**`treearea`**" to display the tree structure.
+- **Right part:** Similar to the left part, but it displays operation information and has the id "**`temptext`**".
 ```
 <div>
 ```
@@ -97,7 +97,7 @@
 ```
 <form method="post" enctype="multipart/form-data" style="display: inline-block;">
 ```
-- Defines a form with the method "post" and enctype "multipart/form-data" to handle file uploads. It's styled to be displayed inline.
+- Defines a form with the method "**`post`**" and enctype "**`multipart/form-data`**" to handle file uploads. It's styled to be displayed inline.
 ```
 <input type="file" id="uploadedFile"/>
 ```
@@ -105,19 +105,19 @@
 ```
 <button type="button" class="btn btn-success center_buttons" id="encode">&nbsp;&nbsp;Encode&nbsp;&nbsp;</button>
 ```
-- Defines a button with the class "btn btn-success center_buttons" and the id "encode" for encoding. It's styled using Bootstrap classes.
+- Defines a button with the class "**`btn btn-success center_buttons`**" and the id "encode" for encoding. It's styled using Bootstrap classes.
 ```
-<button type="button" class="btn btn-danger center_buttons" id="decode">&nbsp;&nbsp;Decode&nbsp;&nbsp;</button>
+<button type= "button" class="btn btn-danger center_buttons" id="decode">&nbsp;&nbsp;Decode&nbsp;&nbsp;</button>
 ```
-- Defines a button with the class "btn btn-danger center_buttons" and the id "decode" for decoding. It's also styled using Bootstrap classes.
+- Defines a button with the class "**`btn btn-danger center_buttons`**" and the id "**`decode`**" for decoding. It's also styled using Bootstrap classes.
 ```
 </body>
 ```
-5. Marks the end of the document's body content.
+- Marks the end of the document's body content.
 ```
 </html>
 ```
-6. Marks the end of the HTML document.
+- Marks the end of the HTML document.
 
 ### CSS
 
