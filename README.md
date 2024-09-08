@@ -75,7 +75,7 @@
 ```
 <script src="script.js" type="module"></script>
 ```
-- Includes another JavaScript module file named "script.js".
+- Includes another JavaScript module file named "**`script.js`**".
 ```
 <body>
 ```
@@ -128,7 +128,7 @@ body {
 }
 ```
 - **html, body:** Selects both the <html> and <body> elements.
-- **height: 100%;:** Sets the height of the <html> and <body> elements to 100% of the viewport height. This ensures that the entire viewport height is covered by these elements, which is often used to ensure elements fill the entire height of the browser window.
+- **height: 100%;:** Sets the height of the <html> and <body> elements to 100% of the viewport height. This ensures that the **entire viewport height** is covered by these elements, which is often used to ensure elements fill the entire height of the browser window.
 ```
 .text_box {
     padding: 30px;
@@ -141,12 +141,12 @@ body {
 }
 ```
 - **.text_box:** Selects elements with the class text_box.
-- **padding: 30px;:** Adds 30 pixels of padding to all sides of the .text_box elements.
-- **width: 50%;:** Sets the width of the .text_box elements to 50% of their containing element's width.
-- **height: 100%;:** Sets the height of the .text_box elements to 100% of their containing element's height.
-- **border:** 1px solid rgb(0, 0, 0);: Sets a 1 pixel solid black border around the .text_box elements.
-- **display: flex;:** Specifies that the layout of the .text_box elements should be a flexbox layout.
-- **flex-wrap: wrap;:** Allows the .text_box elements to wrap to the next line if they exceed the width of their container.
+- **padding: 30px;:** Adds 30 pixels of padding to all sides of the `.text_box` elements.
+- **width: 50%;:** Sets the width of the `.text_box` elements to 50% of their containing element's width.
+- **height: 100%;:** Sets the height of the `.text_box` elements to 100% of their containing element's height.
+- **border:** `1px solid rgb(0, 0, 0);`: Sets a 1 pixel solid black border around the `.text_box` elements.
+- **display: flex;:** Specifies that the layout of the `.text_box` elements should be a flexbox layout.
+- **flex-wrap: wrap;:** Allows the `.text_box` elements to wrap to the next line if they exceed the width of their container.
 - **align-content: center;:** Centers the content vertically within the flex container.
 ```
 #container {
@@ -157,11 +157,11 @@ body {
     margin: 0 auto;
 }
 ```
-- **#container:** Selects an element with the ID container.
-- **width: 100%;:** Sets the width of the #container element to 100% of its containing element's width.
-- **height: 70%;:** Sets the height of the #container element to 70% of its containing element's height.
-- **background-color:** rgb(255, 102, 0);: Sets the background color of the #container element to a shade of orange using RGB values.
-- **display: flex;:** Specifies that the layout of the #container element should be a flexbox layout.
+- **#container:** Selects an element with the `ID container`.
+- **width: 100%;:** Sets the width of the `#container` element to 100% of its containing element's width.
+- **height: 70%;:** Sets the height of the `#container` element to 70% of its containing element's height.
+- **background-color:** `rgb(255, 102, 0);`: Sets the background color of the #container element to a shade of orange using RGB values.
+- **display: flex;:** Specifies that the layout of the `#container` element should be a flexbox layout.
 - **margin: 0 auto;:** Sets the top and bottom margins of the #container element to 0 and automatically centers it horizontally within its containing element.
 ```
 .center_buttons {
@@ -188,8 +188,8 @@ class BinaryHeap {
         this.heap = [];
     }
 ```
-- **constructor():** This is a special method in JavaScript classes that is automatically called when an instance of the class is created. It initializes a new instance of the BinaryHeap class.
-- **this.heap = [];:** This line initializes the heap property of the BinaryHeap instance as an empty array, which will be used to store the elements of the binary heap.
+- **constructor():** This is a special method in JavaScript classes that is automatically called when an instance of the class is created. It initializes a new instance of the `BinaryHeap` class.
+- **this.heap = [];:** This line initializes the heap property of the `BinaryHeap` instance as an empty array, which will be used to store the elements of the binary heap.
 ```
     insert(value) {
         this.heap.push(value);
@@ -198,13 +198,13 @@ class BinaryHeap {
 ```
 - **insert(value):** This method adds a new value to the binary heap.
 - **this.heap.push(value);:** It adds the new value to the end of the heap array.
-- **this.bubbleUp();:** This line calls the bubbleUp() method to maintain the heap property by moving the newly inserted value up the tree as necessary.
+- **this.bubbleUp();:** This line calls the `bubbleUp()` method to maintain the heap property by moving the newly inserted value up the tree as necessary.
 ```
     size() {
         return this.heap.length;
     }
 ```
-- **size():** This method returns the number of elements currently stored in the binary heap.
+- **size():** This method returns the `number of elements` currently stored in the binary heap.
 ```
     empty() {
         return (this.size() === 0);
