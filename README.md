@@ -162,16 +162,16 @@ body {
 - **height: 70%;:** Sets the height of the `#container` element to 70% of its containing element's height.
 - **background-color:** `rgb(255, 102, 0);`: Sets the background color of the #container element to a shade of orange using RGB values.
 - **display: flex;:** Specifies that the layout of the `#container` element should be a flexbox layout.
-- **margin: 0 auto;:** Sets the top and bottom margins of the #container element to 0 and automatically centers it horizontally within its containing element.
+- **margin: 0 auto;:** Sets the top and bottom margins of the `#container` element to 0 and automatically centers it horizontally within its containing element.
 ```
 .center_buttons {
     margin: auto;
     display: block;
 }
 ```
-- **.center_buttons:** Selects elements with the class center_buttons.
+- **.center_buttons:** Selects elements with the class `center_buttons`.
 - **margin: auto;:** Centers the elements horizontally within their containing element.
-- **display: block;:** Sets the elements to be displayed as block-level elements, causing them to start on a new line and take up the full width available to them.
+- **display: block;:** Sets the elements to be displayed as `block-level elements`, causing them to start on a new line and take up the full width available to them.
 
 ### JAVASCRIPT
 
@@ -181,8 +181,8 @@ export { BinaryHeap }
 
 class BinaryHeap {
 ```
-- **export { BinaryHeap }:** This line exports the BinaryHeap class to make it available for import in other JavaScript files.
-- **class BinaryHeap {:** This line defines the BinaryHeap class.
+- **export { BinaryHeap }:** This line exports the `BinaryHeap` class to make it available for import in other JavaScript files.
+- **class BinaryHeap {:** This line defines the `BinaryHeap` class.
 ```
     constructor() {
         this.heap = [];
