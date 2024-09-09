@@ -273,13 +273,17 @@ This class implements a binary heap data structure, providing methods to insert 
 ```
 import { BinaryHeap } from './heap.js';
 export { HuffmanCoder }
+
 ```
-- The BinaryHeap class is imported from the heap.js file.
-- The HuffmanCoder class is exported to be used in other files.
+- The BinaryHeap class is imported from the `heap.js` file.
+- The `HuffmanCoder` class is exported to be used in other files.
+
 ```
 class HuffmanCoder {
+
 ```
-- Defines a class named HuffmanCoder.
+- Defines a class named `HuffmanCoder`.
+
 ```
 stringify(node) {
     if (typeof(node[1]) === "string") {
@@ -287,10 +291,12 @@ stringify(node) {
     }
     return '0' + this.stringify(node[1][0]) + '1' + this.stringify(node[1][1]);
 }
+
 ```
-- Converts a Huffman tree into a string format.
+- Converts a `Huffman Tree into a string format`.
 - If the node is a leaf node (contains a character), it returns 'character.
 - If the node is an internal node, it recursively processes its left child with '0' and its right child with '1'.
+
 ```
 display(node, modify, index = 1) {
     if (modify) {
@@ -307,9 +313,11 @@ display(node, modify, index = 1) {
     return res + '\n' + left + '\n' + right;
 }
 ```
-- Displays the structure of the Huffman tree.
+
+- Displays the structure of the Huffman Tree.
 - If modify is true, adjusts the node structure for easier processing.
-- Uses a recursive approach to build a string representation of the tree, showing parent-child relationships.
+- Uses a `recursive approach` to build a string representation of the tree, showing parent-child relationships.
+
 ```
 destringify(data) {
     let node = [];
@@ -328,9 +336,11 @@ destringify(data) {
     return node;
 }
 ```
-- Converts a string back into a Huffman tree.
+
+- Converts a `string back into a Huffman Tree`.
 - Processes leaf nodes and internal nodes differently.
-- Uses an index this.ind to track the current position in the string.
+- Uses an index `this.ind` to track the current position in the string.
+
 ```
 getMappings(node, path) {
     if (typeof(node[1]) === "string") {
@@ -341,7 +351,7 @@ getMappings(node, path) {
     this.getMappings(node[1][1], path + "1");
 }
 ```
-- Generates the mapping of characters to their binary codes.
+- Generates the `mapping of characters` to their `binary codes`.
 - Recursively traverses the tree to build the paths for each character.
 ```
 encode(data) {
@@ -389,13 +399,13 @@ encode(data) {
     return [final_res, this.display(huffman_encoder, false), info];
 }
 ```
-- Encodes the input data using Huffman coding.
+- `Encodes` the input data using `Huffman Coding`.
 - Creates a frequency map of characters in the data.
-- Builds a Huffman tree using a binary heap.
+- Builds a `Huffman Tree` using a `binary heap`.
 - Generates binary strings for each character.
-- Adds padding to make the binary string length a multiple of 8.
-- Converts the binary string into characters for storage.
-- Returns the encoded string, tree structure, and compression information.
+- `Adds padding` to make the `binary string length` a `multiple of 8`.
+- Converts the `binary string into characters` for `storage`.
+- Returns the `encoded string`, `tree structure`, and `compression information`.
 ```
 decode(data) {
     data = data.split('\n');
@@ -436,19 +446,19 @@ decode(data) {
     return [res, this.display(huffman_decoder, true), info];
 }
 ```
-- Decodes the encoded data using the Huffman tree.
-- Handles special cases where the encoded data includes new lines.
-- Converts the encoded text back to a binary string.
+- Decodes the `encoded data` using the `Huffman Tree`.
+- Handles `special cases` where the `encoded data includes new lines`.
+- Converts the `encoded text` back to a `binary string`.
 - Removes padding from the binary string.
-- Traverses the Huffman tree to decode the binary string back into the original text.
-- Returns the decoded text, tree structure, and additional information.
+- Traverses the `Huffman Tree` to `decode the binary string back into the original text`.
+- Returns the `decoded text`, `tree structure`, and `additional information`.
 
 ### PHP
 
 ```
 <?php
 ```
-- **<?php:** This is the opening PHP tag. It indicates the start of a PHP script.
+- **<?php:** This is the `opening PHP tag`. It indicates the start of a PHP script.
 ```
 include_once("index.html");
 ```
@@ -458,7 +468,7 @@ include_once("index.html");
 ```
 ?>
 ```
-- **?>:** This is the closing PHP tag. It indicates the end of the PHP script.
+- **?>:** This is the `closing PHP tag`. It indicates the end of the PHP script.
 
 ## CONTRIBUTOR
 
